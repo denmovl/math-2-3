@@ -1,0 +1,660 @@
+@import "../components/_reset",
+"../components/fonts";
+
+
+//background-color: transparent )0
+
+$colorViolet: #7e7ab6;
+$colorWhite: #fff;
+$fontSemibold: "OpenSans-Semibold";
+$fontRegular: "Su Regular";
+$fontSuBold: "Su Bold";
+
+
+//SPRITE
+.spriteMainStandardAf {
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../../assets/img/whiteSprite.png") no-repeat;
+    vertical-align: bottom;
+  }
+}
+
+.spriteMainStandardBe {
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../../assets/img/whiteSprite.png") no-repeat;
+    vertical-align: bottom;
+  }
+}
+
+.circle {
+  //ВЫНЕСТИ КАК ОБЩИЙ!
+  width: min-content;
+  border-radius: 50%;
+  border: 1px solid $colorViolet;
+  border-style: dashed;
+  margin: 0 auto;
+}
+
+.colorPurple {
+  color: $colorViolet;
+  font-family: $fontSemibold;
+}
+
+//
+//SPRITE DIFFERENT
+.spriteArrowsBottom {
+  &:after {
+    background-position: -311px -118px;
+    vertical-align: middle;
+  }
+}
+
+.spriteIcon {
+  &:before {
+    background-position: -167px 0;
+    margin-right: 7px;
+  }
+}
+
+.spriteSearch {
+  &:before {
+    background-position: -47px 0;
+  }
+}
+
+.spriteEyes {
+  &:before {
+    background-position: -95px -119px;
+    margin-right: 5px;
+  }
+}
+
+//
+//MAIN SEARCH
+.searchMain {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid $colorWhite;
+  color: $colorWhite;
+  width: 280px;
+  font: 300 16px $fontRegular;
+  padding: 0 25px 5px 30px;
+  cursor: pointer;
+  &::-webkit-input-placeholder {
+    color: $colorWhite;
+  }
+  box-sizing: border-box;
+  &:hover,
+  &:focus {
+    border-color: $colorViolet;
+    transition: .3s;
+  }
+}
+
+//
+//MAIN BUTTON
+.buttonMain {
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: 0;
+  width: auto;
+  font: 300 14px $fontSemibold;
+  color: $colorWhite;
+  cursor: pointer;
+  outline: none;
+  max-width: 300px;
+}
+
+//
+//slick
+.slick-prev,
+.slick-next {
+  display: none;
+}
+
+//Animation for InfoEducationWrap
+.animation1{
+  animation-duration: 3s;
+  animation-name: studentWrap;
+
+  @keyframes studentWrap{
+    from{
+      margin-left: -80%;
+    }
+    to{
+      margin-left: 0;
+    }
+  }
+}
+
+.animation2{
+  animation-duration: 3s;
+  animation-name: schoolWrap;
+  @keyframes schoolWrap {
+    from {
+      margin-top: -80%;
+    }
+    to{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.animation3{
+  animation-duration: 3s;
+  animation-name: eachWrap;
+  @keyframes eachWrap {
+    from {
+      margin-right: -80%;
+      to {
+        margin-right: 0;
+      }
+    }
+  }
+}
+//
+
+//Animation for block HowTo
+.animationHowTo{
+  animation-duration: 3s;
+  animation-name: animationHowTo;
+  @keyframes animationHowTo {
+    from {
+      transform: scale(0);
+      to {
+        transform: scale(1);
+      }
+    }
+  }
+}
+//
+
+//
+.center {
+  max-width: 1240px;
+  min-width: 320px;
+  width: 100%;
+  padding: 0 10px !important;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.headWrap {
+  // display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.headWrap .center{
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menu {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 50px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          font: 300 16px $fontSemibold;
+          color: $colorWhite;
+          &:hover {
+            color: #7e7ab6;
+            transition: all .3s;
+          }
+        }
+      }
+    }
+  }
+  .spriteArrowsBottom {
+    &:after {
+      margin-left: 12px;
+    }
+  }
+  .login {
+    button {
+      color: $colorWhite;
+      background: #5cb85c;
+      &:hover {
+        transition: all 0.5s;
+        background: #489048;
+      }
+    }
+  }
+  .burgerWrap{
+    display: none;
+    float: right;
+    cursor: pointer;
+    margin-top: -20px;
+    .burgerIcon,
+    .burgerIcon:after,
+    .burgerIcon:before {
+      content: '';
+      border-top: 2px solid $colorWhite;
+      width: 27px;
+      display: inline-block;
+      position: relative;
+    }
+    .burgerIcon:after,
+    .burgerIcon:before {
+      position: absolute;
+    }
+    .burgerIcon:after {
+      top: 6px;
+    }
+    .burgerIcon:before {
+      bottom: 8px;
+    }
+    .burgerMenuActive{
+      background: #000000ad;
+      display: none;
+      position: absolute;
+      margin-top: 17px;
+      right: 7px;
+      border-radius: 5px;
+      ul{
+        display: block;
+        li{
+          padding: 5px 10px;
+          a{
+            font: 300 16px $fontSemibold;
+            color: $colorWhite;
+            &:hover {
+              color: #7e7ab6;
+              transition: all .3s;
+            }
+          }
+          button{
+            color: $colorWhite;
+            background: #5cb85c;
+            &:hover {
+              transition: all 0.5s;
+              background: #489048;
+            }
+          }
+        }
+      }
+    }
+    .activeBurger {
+      display: block;
+    }
+  }
+}
+
+
+.startLearningWrap {
+  background: url("../../assets/img/girlMath.png") no-repeat center;
+  max-height: 750px;
+  padding-bottom: 5%;
+  background-size: 100% 100%;
+  .mathTextWrap {
+    padding-top: 22%;
+    text-align: center;
+    color: $colorWhite;
+    p {
+      font: 300 36px $fontSemibold;
+    }
+    span {
+      display: block;
+      padding-top: 8px;
+      font: 300 18px $fontRegular;
+    }
+  }
+  .choiceInfoWrap {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    .spriteSearch {
+      &:before {
+        position: relative;
+        right: -29px;
+        bottom: 7px;
+      }
+    }
+    .spriteArrowsBottom {
+      &:after {
+        position: relative;
+        bottom: 3px;
+        right: 26px;
+      }
+    }
+  }
+  .buttonMemberWrap {
+    margin-top: 8%;
+    text-align: center;
+    button {
+      background: #5cb85c;
+      &:hover {
+        transition: all 0.5s;
+        background: #489048;
+      }
+    }
+  }
+}
+
+.infoEducationWrap {
+  background: $colorWhite;
+  .educationWrap {
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .eachInfo {
+      &:first-child {
+        width: 150px;
+      }
+      &:nth-child(2) {
+        width: 130px;
+      }
+      &:last-child {
+        width: 170px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      p {
+        margin-top: 25px;
+        text-align: center;
+        font: 300 28px $fontSuBold;
+        color: $colorViolet;
+        margin-bottom: 15px;
+      }
+      span {
+        font: 300 14px $fontRegular;
+        color: #424242;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+
+}
+
+.quotesMainWrap {
+  background: #fbfbfd;
+  min-height: 170px; //#fbfbfd
+  padding: 40px 0;
+  .quoteWrap {
+    p {
+      width: calc(47% - -25px);
+      margin: 0 auto;
+      font: 300 16px $fontSemibold;
+      color: #424242;
+      text-align: center;
+      &:after {
+        content: "";
+        border-bottom: 4px solid $colorViolet;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+      }
+    }
+    span {
+      padding-top: 15px;
+      display: block;
+      text-align: center;
+      color: #424242;
+      font: 300 14px $fontSemibold;
+    }
+  }
+  button {
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+  .spriteEyes {
+    background: transparent;
+    border: 1px solid $colorViolet;
+    color: #424242;
+    &:hover {
+      transition: .3s;
+      background: #fff;
+    }
+  }
+}
+
+.howToWrap {
+  background: $colorWhite;
+  padding: 50px 0;
+  .howToTitle {
+    p {
+      font: 300 36px $fontRegular;
+      text-align: center;
+    }
+  }
+  .howToShortInfo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    .everyInfoWrap {
+      img {
+        padding: 25px;
+        vertical-align: middle;
+      }
+      p {
+        margin-top: 20px;
+        text-align: center;
+        width: 184px;
+        max-width: 100%;
+        font: 300 14px $fontRegular;
+      }
+    }
+  }
+}
+
+.wePartner {
+  background: #fbfbfd; //#fbfbfd
+  .partnersWrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 200px;
+  }
+  .aboutPartner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-left: 1px solid $colorViolet;
+    width: calc(24% - -20px);
+    p {
+      font: 300 26px $fontSuBold;
+      color: $colorViolet;
+      padding-bottom: 20px;
+    }
+    span {
+      line-height: 25;
+      font: 300 14px $fontRegular;
+    }
+  }
+}
+
+.whyWe{
+  background: $colorWhite;
+  .whyMathWrap{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    .textWrap{
+      h2{
+        font:300 32px $fontRegular;
+        padding-bottom: 40px;
+      }
+      .someText{
+        font:300 16px $fontRegular;
+        width: calc(80% + 10px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        //max-height: 100px;
+      }
+      button{
+        margin-top: 40px;
+        background: #5cb85c;
+        &:hover {
+          transition: all 0.5s;
+          background: #489048;
+        }
+      }
+    }
+    .imgWrap{
+      img{
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+footer{
+  background: $colorViolet;
+  .footerWrap{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      font:300 14px $fontRegular;
+      color: $colorWhite;
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  .menu,
+  .login{
+    display: none;
+  }
+  .headWrap .center .burgerWrap{
+    display: block;
+  }
+  .startLearningWrap{
+    .mathTextWrap{
+      p{
+        font-size: 24px;
+      }
+      span{
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 986px){
+  .startLearningWrap{
+    .choiceInfoWrap{
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+  .supportInputWrap{
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 342px){
+  .searchMain{
+    width: 258px;
+  }
+}
+@media screen and (max-width: 490px){
+  .infoEducationWrap{
+    padding: 40px 0;
+    .educationWrap{
+      flex-direction: column;
+      .eachInfo{
+        margin-bottom: 20px;
+        p{
+          margin: 10px 0;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 938px) {
+  .howToWrap{
+    padding: 40px 0;
+    .howToTitle{
+      p{
+        font-size: 24px;
+      }
+    }
+    .howToShortInfo{
+      .everyInfoWrap{
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 728px){
+  .wePartner{
+    padding: 40px 0;
+    .partnersWrap{
+      flex-direction: column;
+      .partnerEver{
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .aboutPartner{
+      border-top: 1px solid #7e7ab6;
+      border-left: none;
+      width: 182px;
+    }
+  }
+}
+
+@media screen and (max-width: 1133px){
+  .whyWe{
+    .whyMathWrap{
+      flex-direction: column;
+      .textWrap{
+        text-align: center;
+        margin-bottom: 30px;
+        h2{
+          padding-bottom: 30px;
+          font-size: 24px;
+        }
+        .someText{
+          margin: 0 auto;
+        }
+
+      }
+      .imgWrap{
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 432px){
+  footer{
+    .footerWrap{
+      flex-direction: column;
+      img{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

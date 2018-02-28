@@ -1,0 +1,685 @@
+@import "../components/reset",
+        "../components/fonts";
+$colorWhite: #fff;
+$fontSemibold: "OpenSans-Semibold";
+$fontRegular: "Su Regular";
+$fontSuBold: "Su Bold";
+.center {
+    max-width: 1240px;
+    min-width: 320px;
+    width: 100%;
+    padding: 0 10px !important;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+//ICON
+.spriteMainStandard {
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background: url("../../assets/img/whiteSprite.png") no-repeat; //img/whiteSprite.png
+        vertical-align: bottom;
+    }
+}
+
+.spriteMainSmall {
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("../../assets/img/spraiti-270159.jpg") no-repeat;
+        vertical-align: bottom;
+        margin-right: 4px;
+    }
+}
+
+.spriteMainSmallRight {
+    &:after {
+        content: "";
+        float: right;
+        position: absolute;
+        clear: none;
+        top: 18px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background: url("../../assets/img/spraiti-270159.jpg") no-repeat;
+    }
+}
+
+// /ICON
+//SHORT TEXT
+.shortText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//
+// DIFFERENT ICON
+.iconPerson {
+    &:before {
+        background-position: -141px 0;
+    }
+}
+
+.iconPlay {
+    &:before {
+        background-position: -262px -71px;
+    }
+}
+
+.iconEdit {
+    &:before {
+        background-position: 2px -71px;
+    }
+}
+
+.iconChange {
+    &:before {
+        background-position: -286px -23px;
+    }
+}
+
+.iconSettings {
+    &:before {
+        background-position: -455px -95px;
+    }
+}
+
+.iconSupport {
+    &:before {
+        background-position: -335px -143px;
+    }
+}
+
+.iconStudent {
+    &:before {
+        background-position: -361px -121px;
+        vertical-align: middle;
+    }
+}
+
+//
+//COLORS BLOCKS
+.colorGreenBg {
+    background: #5cb85c;
+}
+
+.colorPurpleBG {
+    background: #7e7ab6;
+}
+
+.colorBlackBlueBg {
+    background: #3f4350;
+}
+
+//
+//COLORS
+.colorRed {
+    color: #e55044;
+}
+
+.colorGreen {
+    color: #5cb85c;
+}
+
+//
+//COLORS AND BORDER
+.numberColorRed {
+    color: #e55044;
+    border: 1.5px solid #e55044;
+}
+
+.numberColorGreen {
+    color: #5cb85c;
+    border: 1.5px solid #5cb85c;
+}
+
+//
+//ARROWS
+.iconArrowBottom {
+    &:after {
+        background-position: -261.5px -100px;
+    }
+}
+
+.iconArrowBottomLeft {
+    &:before {
+        background-position: -261px -100px;
+    }
+}
+
+.active {
+    &:after {
+        background-position: -241px -102px;
+    }
+}
+
+//ARROWS
+//BUTTON
+.buttonMain {
+    padding: 7px 15px;
+    border-radius: 20px;
+    border: 0;
+    width: auto;
+    font: 300 14px $fontSemibold;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    max-width: 300px;
+    &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+}
+
+header {
+    background: #3f4350;
+    .headWrap .center {
+        min-height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .menu {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 50px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        font: 300 16px $fontSemibold;
+                        color: $colorWhite;
+                        &:hover {
+                            color: #7e7ab6;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+        .menuPerson {
+            img {
+                display: inline-block;
+            }
+            a {
+                display: inline-block;
+                vertical-align: top;
+                padding: 10px 0 0 6px;
+                font: 300 14px $fontSemibold;
+                color: $colorWhite;
+            }
+        }
+        .menuBurger {
+            display: none;
+            float: right;
+            cursor: pointer;
+            margin-top: -11px;
+            .burgerIcon,
+            .burgerIcon:after,
+            .burgerIcon:before {
+                content: '';
+                border-top: 2px solid $colorWhite;
+                width: 27px;
+                display: inline-block;
+                position: relative;
+            }
+            .burgerIcon:after,
+            .burgerIcon:before {
+                position: absolute;
+            }
+            .burgerIcon:after {
+                top: 6px;
+            }
+            .burgerIcon:before {
+                bottom: 8px;
+            }
+        }
+        .menuBurgerActive {
+            display: none;
+            position: absolute;
+            margin-top: 33px;
+            right: 0;
+            ul {
+                background: #3f4350;
+                li {
+                    padding: 10px 15px;
+                    a {
+                        font: 300 15px $fontSemibold;
+                        color: $colorWhite;
+                        &:hover {
+                            color: #7e7ab6;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+        .personActiveInMenu {
+            text-align: center;
+            display: block;
+        }
+        .activeBurger {
+            display: block;
+        }
+    }
+}
+
+main {
+    background: #fbfbfd;
+    padding: 30px 0;
+    .leftWrap {
+        //display: none;
+        display: inline-block;
+        .commonLeftWrap {
+            display: block;
+            width: 350px;
+            min-height: 400px;
+            background: $colorWhite;
+            vertical-align: top;
+            margin-bottom: 30px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .clientImg {
+            display: inline-block;
+        }
+        .clientStatus {
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .clientInformation {
+            margin-top: 6px;
+            p {
+                font: 300 24px $fontRegular;
+                color: #3f4350;
+                max-width: 167px;
+            }
+            span {
+                font: 300 14px $fontSemibold;
+                color: #7e7ab6;
+                display: block;
+                padding-top: 1px;
+            }
+        }
+        .clientActive {
+            margin-top: 8px;
+            a {
+                cursor: pointer;
+                font: 300 14px $fontRegular;
+                color: #dadadc;
+            }
+        }
+        .clientFunction {
+            border-top: 1px solid #d2d2e4;
+            padding-top: 24px;
+            margin-top: 32px;
+        }
+        .editChangeWrap {
+            margin-top: 24px;
+            margin-bottom: 11px;
+            button {
+                display: inline-block;
+            }
+        }
+        .supportEdit {
+            margin-top: 24px;
+            background: #3f4350;
+            display: block;
+        }
+        .studentsWrap {
+            margin-bottom: 0;
+            .nameWrap {
+                p {
+                    font: 300 24px $fontSemibold;
+                }
+            }
+            .personsWrap {
+                margin-top: 23px;
+                border-top: 1px solid #d2d2e4;
+                padding-top: 17px;
+            }
+            .personMainSection {
+                margin-top: 23px;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            .personInformation {
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 5px;
+            }
+            .personData {
+                margin-top: 7px;
+                p {
+                    font: 300 16px $fontSemibold;
+                    color: #424242;
+                    max-width: 222px;
+                }
+                span {
+                    padding-top: 3px;
+                    display: block;
+                    font: 300 14px $fontSemibold;
+                    color: #3f4350;
+                    max-width: 223px;
+                }
+            }
+            .personProfile {
+                margin-top: 6px;
+                a {
+                    font: 300 14px $fontRegular;
+                    color: #cdcdd0;
+                }
+            }
+            .personImg {
+                display: inline-block;
+            }
+        }
+    }
+    .rightWrap {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 40px;
+        .commonProgressWrap {
+            width: 795px;
+            max-width: 100%;
+            min-height: 82px;
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .studentsProgress {
+            img {
+                display: inline-block;
+            }
+            p {
+                display: inline-block;
+                position: relative;
+                vertical-align: top;
+                font: 300 24px $fontRegular;
+                color: #3f4350;
+                padding: 9px 26px 9px 9px;
+                cursor: pointer;
+                width: calc(100% - 95px);
+            }
+        }
+        .educationWrap {
+            display: none;
+        }
+        .titleWrap {
+            margin-top: 5px;
+            padding: 15px 9px 15px 10px;
+            border-top: 1px solid #d2d2e4;
+            span {
+                display: inline-block;
+                top: 5px;
+            }
+            p {
+                display: inline-block;
+                font: 300 18px $fontSemibold;
+                color: #424242;
+                cursor: pointer;
+                width: 100%;
+                position: relative;
+                &.spriteMainSmallRight {
+                    &:after {
+                        top: 5px;
+                        right: 3px;
+                    }
+                }
+            }
+        }
+        .algebraMainWrap {
+            display: none;
+        }
+        .sectionsAlgebra {
+            padding: 15px 9px 15px 40px;
+            margin-bottom: 1px;
+            p {
+                display: inline-block;
+                font: 300 16px $fontRegular;
+                color: #424242;
+                cursor: pointer;
+                position: relative;
+                width: calc(100% - 43px);
+                &.spriteMainSmallRight {
+                    &:after {
+                        top: 3px;
+                        right: 2px;
+                    }
+                }
+            }
+        }
+        .numbers {
+            display: inline-block;
+            font: 300 16px $fontSemibold;
+            border-radius: 17px;
+            padding: 3px 5px;
+            margin-right: 7px;
+        }
+        .mainFunctionsAlgebra {
+            display: none;
+            padding: 15px 40px 15px 40px;
+            ul {
+                li {
+                    font: 300 14px $fontRegular;
+                    color: #424242;
+                    padding-bottom: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .leftPartFunction {
+            display: inline-block;
+        }
+        .rightPartFunction {
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+            clear: none;
+        }
+        .percentageFunction {
+            font: 300 14px $fontSuBold;
+            //color: #000;
+        }
+        .iconHomeSchool {
+            background-position: 0 -21px;
+            vertical-align: middle;
+        }
+    }
+}
+
+//.testWrap{
+//  margin-top: 50px;
+//  .blockTest{
+//    width: 40px;
+//    height: 40px;
+//    border: 1px solid black;
+//    border-radius: 20px;
+//    overflow: hidden;
+//  }
+//}
+@media screen and (max-width: 740px) {
+    header {
+        .headWrap .center {
+            .menu,
+            .menuPerson {
+                display: none;
+            }
+            .menuBurger {
+                display: block;
+            }
+        }
+    }
+}
+
+//MAIN
+@media screen and (max-width: 1217px) {
+    main {
+        .leftWrap {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            min-width: 66px;
+            .commonLeftWrap {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+            .clientWrap {
+                margin-right: 5%;
+            }
+        }
+        .rightWrap {
+            display: block;
+            //width: 70%;
+            margin: 0 auto;
+            .commonProgressWrap {
+                margin: 0 auto 20px auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 744px) {
+    main {
+        .center {
+            .leftWrap {
+                flex-direction: column;
+                justify-content: center;
+                .commonLeftWrap {
+                    margin: 0 auto;
+                }
+                .clientWrap {
+                    margin-bottom: 5%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        .leftWrap {
+            .commonLeftWrap {
+                max-width: 350px;
+                width: 100%;
+            }
+            .clientInformation {
+                p {
+                    font-size: 20px;
+                }
+                span {
+                    font-size: 13px;
+                }
+            }
+            .clientFunction {
+                margin-top: 15px;
+            }
+            .studentsWrap {
+                .nameWrap {
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 355px) {
+    main {
+        .leftWrap {
+            .editChangeWrap {
+                margin-top: 11px;
+                margin-bottom: 0;
+                button {
+                    display: block;
+                }
+                .editChangeDifferent {
+                    margin-top: 11px;
+                    margin-bottom: 0;
+                }
+            }
+            .supportEdit {
+                margin-top: 11px;
+            }
+            .colorPurpleBG {
+                margin-top: 11px;
+            }
+            .studentsWrap {
+                .personsWrap {
+                    margin-top: 11px;
+                    padding-top: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 338px) {
+    main {
+        .leftWrap {
+            .studentsWrap {
+                .personInformation {
+                    width: 57%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        .rightWrap {
+            .rightPartFunction {
+                float: none;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 525px) {
+    main {
+        .rightWrap {
+            .studentsProgress p {
+                font-size: 20px;
+            }
+            .titleWrap p {
+                font-size: 16px;
+            }
+            .sectionsAlgebra {
+                padding-left: 10px;
+            }
+            .mainFunctionsAlgebra {
+                padding-top: 0;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 455px) {
+    main {
+        .rightWrap {
+            .studentsProgress {
+                p {
+                    //width: 60%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}

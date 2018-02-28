@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+    <link rel="stylesheet" href="css/pages/math2.css">
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="functions_math2/underElementEducation.js"></script>
+    <script type="text/javascript" src="functions_math2/underElementTutoring.js"></script>
+    <script type="text/javascript" src="functions_math2/underElementPre-Algebra.js"></script>
+    <script type="text/javascript" src="functions_math2/burger.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headWrap">
+            <div class="center">
+                <div class="menuLogo">
+                    <a href="#"><img src="assets/img/logoHeader.png" alt="logo"></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Test prep</a></li>
+                        <li><a href="#">Tutoring</a></li>
+                        <li><a href="#">Homeschooling</a></li>
+                    </ul>
+                </div>
+                <div class="menuPerson">
+                    <img src="assets/img/personHeader.png" alt="person">
+                    <a href="#">William K.</a>
+                </div>
+                <div class="menuBurger">
+                    <span class="burgerIcon"></span>
+                    <div class="menuBurgerActive">
+                        <ul>
+                            <li><a href="#">Test prep</a></li>
+                            <li><a href="#">Tutoring</a></li>
+                            <li><a href="#">Homeschooling</a></li>
+                            <li><a class="personActiveInMenu" href="#">William K.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="center">
+
+                <!--LEFT WRAP-->
+                <div class="leftWrap">
+                    <div class="clientWrap commonLeftWrap">
+                        <div class="clientData">
+                            <div class="clientImg">
+                                <img src="assets/img/personClient.png" alt="logoClient">
+                            </div>
+                            <div class="clientStatus">
+                                <div class="clientInformation">
+                                    <p class="shortText">William K.</p>
+                                    <span>Administrator</span>
+                                </div>
+                                <div class="clientActive">
+                                    <a class="spriteMainSmall iconPerson" href="#">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clientFunction">
+                            <button class="buttonMain spriteMainStandard iconPlay colorGreenBg" type="submit">
+                            Go to student`s most recent lesson
+                        </button>
+
+                            <div class="editChangeWrap">
+                                <button class="buttonMain colorPurpleBG spriteMainStandard iconEdit" type="submit">
+                                Edit Change
+                            </button>
+                                <button class="buttonMain colorPurpleBG spriteMainStandard iconChange" type="submit">
+                                Change Password
+                            </button>
+                            </div>
+
+                            <button class="buttonMain colorPurpleBG spriteMainStandard iconSettings" type="submit">
+                            Manage membership
+                        </button>
+
+                            <button class="buttonMain colorBlackWhiteBg supportEdit spriteMainStandard iconSupport" type="submit">
+                            Support
+                        </button>
+                        </div>
+                    </div>
+                    <div class="studentsWrap commonLeftWrap">
+                        <div class="nameWrap">
+                            <p>Students</p>
+                        </div>
+                        <div class="personsWrap">
+                            <div class="personMainSection">
+                                <div class="personImg">
+                                    <img src="assets/img/student1.png" alt="student1">
+                                </div>
+                                <div class="personInformation">
+                                    <div class="personData">
+                                        <p class="shortText">You</p>
+                                        <span>Homeschooling, College Tutoring</span>
+                                    </div>
+                                    <div class="personProfile">
+                                        <a href="#" class="spriteMainSmall iconPerson">
+                                        View profile
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="personMainSection">
+                                <div class="personImg">
+                                    <img src="assets/img/student2.png" alt="student2">
+                                </div>
+                                <div class="personInformation">
+                                    <div class="personData">
+                                        <p class="shortText">Daniel Day-Lewis</p>
+                                        <span>Homeschooling, College Tutoring</span>
+                                    </div>
+                                    <div class="personProfile">
+                                        <a href="#" class="spriteMainSmall iconPerson">
+                                        View profile
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personMainSection">
+                                <div class="personImg">
+                                    <img src="assets/img/student3.png" alt="student3">
+                                </div>
+                                <div class="personInformation">
+                                    <div class="personData">
+                                        <p class="shortText">Thomas Hardy</p>
+                                        <span>Middle/High School</span>
+                                    </div>
+                                    <div class="personProfile">
+                                        <a href="#" class="spriteMainSmall iconPerson">
+                                        View profile
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--RIGHT WRAP-->
+                <div class="rightWrap">
+                    <div class="day-lewisProgressWrap commonProgressWrap">
+                        <div class="day-lewisInfo studentsProgress">
+
+                            <img src="assets/img/student2.png" alt="student2">
+                            <p id="nameClick" class="spriteMainSmallRight iconArrowBottom">
+                                Daniel Day-Lewis current progress
+                            </p>
+
+                        </div>
+                        <div class="educationWrap">
+                            <div class="collageWrap">
+                                <div class="titleWrap tutoringWrap">
+                                    <p id="nameClickTutoring" class="spriteMainSmall iconStudent spriteMainSmallRight iconArrowBottom">
+                                        College tutoring
+                                    </p>
+                                </div>
+
+                                <div class="algebraMainWrap">
+                                    <div class="sectionsAlgebra">
+
+                                        <span class="numbers numberColorRed">24</span>
+                                        <p id="nameClickAlgebra" class="spriteMainSmallRight iconArrowBottom">Pre-Algebra</p>
+
+                                    </div>
+                                    <div class="mainFunctionsAlgebra">
+                                        <div class="leftPartFunction">
+                                            <ul>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorGreen">50%</span> Whole Numbers
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorGreen">51%</span> Integers
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">0%</span> Fractions
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorGreen">100%</span> Decimals and Percents
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">0%</span> Algebraic Expressions
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">17%</span> Equations
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="rightPartFunction">
+                                            <ul>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">0%</span> Ratio and Proportion
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">0%</span> Word Problems and Inequalities
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">0%</span> Functions and Graphing
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">0%</span> Linear Equations
+                                                </li>
+                                                <li>
+                                                    <span class=" spriteMainSmall iconArrowBottomLeft percentageFunction colorRed">0%</span> Systems of Equations
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="sectionsAlgebra">
+                                        <span class="numbers numberColorRed">42</span>
+                                        <p class="spriteMainSmallRight iconArrowBottom">Intruductory Algebra</p>
+                                    </div>
+                                    <div class="sectionsAlgebra">
+                                        <span class="numbers numberColorGreen">68</span>
+                                        <p class="spriteMainSmallRight iconArrowBottom">Intruductory Algebra</p>
+                                    </div>
+                                    <div class="sectionsAlgebra">
+                                        <span class="numbers numberColorGreen">80</span>
+                                        <p class="spriteMainSmallRight iconArrowBottom">College Algebra</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="homeschoolingWrap">
+                                <div class="titleWrap tutoringWrap">
+                                    <p class="spriteMainSmall iconStudent spriteMainSmallRight iconArrowBottom">
+                                        Homeschooling
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hardyProgressWrap commonProgressWrap">
+                        <div class="hardyInfo studentsProgress">
+                            <img src="assets/img/student3.png" alt="student3">
+                            <p class="spriteMainSmallRight iconArrowBottom">
+                                Thomas Hardy current progress
+                            </p>
+                        </div>
+                    </div>
+                    <div class="yourProgressWrap commonProgressWrap">
+                        <div class="yourInfo studentsProgress">
+                            <img src="assets/img/student1.png" alt="student1">
+                            <p class="spriteMainSmallRight iconArrowBottom">
+                                Your current progress
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
